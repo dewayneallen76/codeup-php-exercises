@@ -7,14 +7,14 @@ $c = '10';
 // TODO: Shorten these two if statements to a single if/else
 if ($a < $b) {
     echo "$a is less than $b\n";
-} else if ($a >= $b) {
+} else {
     echo "$a is greater than or equal to $b\n";
 }
 
 // TODO: Shorten these two if statements to a single if/else
 if ($b < $c) {
     echo "$b is less than $c\n";
-} else if ($b >= $c) {
+} else {
     echo "$b is greater than or equal to $c\n";
 }
 
@@ -26,6 +26,6 @@ if ($b === $c) {
     echo "$b is identical to $c\n";
 } else if ($b == $c) {
     echo "$b is equal to $c\n";
-} else if ($b != $c) {
+} else {
     echo "$b is not equal to $c\n";
 }
