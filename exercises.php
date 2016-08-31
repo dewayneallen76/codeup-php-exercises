@@ -24,12 +24,18 @@
 // echo "The second user specified argument is $argv[2]" .PHP_EOL;
 // echo "The first user specified argument is $argv[1]" .PHP_EOL;
 
-$names = ['zach', 'ryan', 'fer', 'will'];
+$students = [
+    ['name' => 'Virginia Potts', 'age' => 29],
 
-foreach ($names as $name) {
-	echo "$name".PHP_EOL;
-}
+    ['name' => 'Elon Musk', 'age' => 42],
 
-foreach (range(100,200) as $n) {
-	echo "$n".PHP_EOL;
+    ['name' => 'Rasmus Lerdorf', 'age' => 45],
+
+    ['name' => 'Marissa Mayer', 'age' => 38]
+];
+
+foreach ($students as $student) {
+    foreach($student as $key => $value) {
+    	echo "The student's $key is $value" . PHP_EOL;
+    }
 }
