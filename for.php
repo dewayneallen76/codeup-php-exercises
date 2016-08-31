@@ -9,7 +9,10 @@ $i = trim(fgets(STDIN));
 echo PHP_EOL;
 
 for($a = $a; $a <= $b; $a += $i) {
-  fwrite(STDOUT, "$a".PHP_EOL);
+  if($i == 0) {
+    fwrite(STDOUT, $a .PHP_EOL);
+    $a +=1;
+  }
 }
 
 
