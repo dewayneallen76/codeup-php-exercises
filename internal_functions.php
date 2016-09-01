@@ -3,12 +3,34 @@
 // TODO: Create your inspect() function here
 
 function inspect($a) {
-	echo gettype($a) .PHP_EOL;
-	echo ($a) .PHP_EOL; 
-	if (is_array($a)) return "array"; 
+	$type = gettype($a);
+	$value = $a;
+	
+	if(is_numeric($a)) {
+		echo "The $type is $value".PHP_EOL;
+	} elseif (is_bool($a)) {
+		if ($a == 0) {
+			$value = 'false';
+		} elseif ($a == 1) {
+			$value = 'true';
+		}
+		echo "The $type is $value".PHP_EOL;
+	} elseif (is_array($a)) {
+		if (empty($a)) {
+			echo "This is an empty $type".PHP_EOL;
+		} else {
+			echo "This is an $type".PHP_EOL;
+		}
+	} elseif (is_string($a)) {
+		if (empty($a)) {
+			echo "This is an empty $type".PHP_EOL;
+		} else {
+			echo "The $type is $value".PHP_EOL;
+		}
+	} elseif (is_null($a))	{
+			echo "This is NULL".PHP_EOL;
+	}
 }
-    
-
 
 // Do not mofify these variables!
 $string1 = "I'm a little teapot";
