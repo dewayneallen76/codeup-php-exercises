@@ -1,4 +1,7 @@
 <?php
+// Create variables $a and $b at the top of your script and give them different values. Watch what happens (or, does not happen) to your function output as you set and modify $a & $b outside of your functions. Think carefully about how this behavior differs from the way JavaScript handles variables.
+$a = 5;
+$b = 10;
 // function to add two values
 function add($a, $b)
 {
@@ -25,8 +28,8 @@ function modulus($a, $b) {
 }
 
 // Add code to test your functions here
-echo add(-5,-5).PHP_EOL;
-echo subtract(100,10).PHP_EOL;
-echo multiply(5,5).PHP_EOL;
-echo divide(144,12).PHP_EOL;
-echo modulus(3,3).PHP_EOL;
+echo add($a,$b).PHP_EOL;
+echo subtract($a,$b).PHP_EOL;
+echo multiply($a,$b).PHP_EOL;
+echo divide($a,$b).PHP_EOL;
+echo modulus($a,$b).PHP_EOL;
