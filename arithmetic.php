@@ -27,9 +27,9 @@ function modulus($a, $b) {
 	return $a % $b;
 }
 
+
 // Add code to test your functions here
 echo add($a,$b).PHP_EOL;
 echo subtract($a,$b).PHP_EOL;
 echo multiply($a,$b).PHP_EOL;
 echo divide($a,$b).PHP_EOL;
-echo modulus($a,$b).PHP_EOL;
