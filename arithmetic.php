@@ -7,7 +7,7 @@ function add($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		return $a + $b;
 	} else {
-		echo "ERROR: You must enter a number." .PHP_EOL;
+		throwErrorMessage();
 	}  
 }
 // function to subtract two values
@@ -15,7 +15,7 @@ function subtract($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		return $a - $b;
 	} else {
-		echo "ERROR: You must enter a number." .PHP_EOL;
+		throwErrorMessage();
 	}  
 }
 // function to multiply two values
@@ -23,7 +23,7 @@ function multiply($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		return $a * $b;
 	} else {
-		echo "ERROR: You must enter a number." .PHP_EOL;
+		throwErrorMessage();
 	}  
 }
 // function to divide two values
@@ -39,10 +39,13 @@ function modulus($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		return $a % $b;
 	} else {
-		echo "ERROR: You must enter a number." .PHP_EOL;
+		throwErrorMessage();
 	}	
 }
 
+function throwErrorMessage () {
+	echo "ERROR: You must enter a number." .PHP_EOL;
+}
 
 // Add code to test your functions here
 echo add('cat','dog').PHP_EOL;
