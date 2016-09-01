@@ -3,33 +3,49 @@
 $a = 5;
 $b = 10;
 // function to add two values
-function add($a, $b)
-{
-    return $a + $b;
+function add($a = 0, $b = 0) {
+	if(is_numeric($a) && is_numeric($b)) {
+		return $a + $b;
+	} else {
+		echo "ERROR: You must enter a number." .PHP_EOL;
+	}  
 }
 // function to subtract two values
-function subtract($a, $b)
-{
-    return $a - $b;
+function subtract($a = 0, $b = 0) {
+	if(is_numeric($a) && is_numeric($b)) {
+		return $a - $b;
+	} else {
+		echo "ERROR: You must enter a number." .PHP_EOL;
+	}  
 }
 // function to multiply two values
-function multiply($a, $b)
-{
-    return $a * $b;
+function multiply($a = 0, $b = 0) {
+	if(is_numeric($a) && is_numeric($b)) {
+		return $a * $b;
+	} else {
+		echo "ERROR: You must enter a number." .PHP_EOL;
+	}  
 }
 // function to divide two values
-function divide($a, $b)
-{
-    return $a / $b;
+function divide($a = 0, $b = 0) {
+	if($a == 0 or $b ==0) {
+		echo "ERROR: You cannot divide by zero." .PHP_EOL;
+	} else {
+		return $a / $b;
+	}
 }
 // function to get the modulus of two values 
-function modulus($a, $b) {
-	return $a % $b;
+function modulus($a = 0, $b = 0) {
+	if(is_numeric($a) && is_numeric($b)) {
+		return $a % $b;
+	} else {
+		echo "ERROR: You must enter a number." .PHP_EOL;
+	}	
 }
 
 
 // Add code to test your functions here
-echo add($a,$b).PHP_EOL;
-echo subtract($a,$b).PHP_EOL;
-echo multiply($a,$b).PHP_EOL;
-echo divide($a,$b).PHP_EOL;
+echo add('cat','dog').PHP_EOL;
+echo subtract('cat',$b).PHP_EOL;
+echo multiply($a,'dog').PHP_EOL;
+echo divide($a,0).PHP_EOL;
