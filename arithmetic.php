@@ -7,7 +7,7 @@ function add($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		return $a + $b;
 	} else {
-		throwErrorMessage();
+		return throwErrorMessage("add");
 	}  
 }
 // function to subtract two values
@@ -15,7 +15,7 @@ function subtract($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		return $a - $b;
 	} else {
-		throwErrorMessage();
+		return throwErrorMessage("subtract");
 	}  
 }
 // function to multiply two values
@@ -23,12 +23,12 @@ function multiply($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		return $a * $b;
 	} else {
-		throwErrorMessage();
+		return throwErrorMessage("multiply");
 	}  
 }
 // function to divide two values
 function divide($a = 0, $b = 0) {
-	if($a == 0 or $b ==0) {
+	if($a == 0 or $b == 0)  {
 		echo "ERROR: You cannot divide by zero." .PHP_EOL;
 	} else {
 		return $a / $b;
@@ -39,16 +39,17 @@ function modulus($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		return $a % $b;
 	} else {
-		throwErrorMessage();
+		return throwErrorMessage("get modulus");
 	}	
 }
 
-function throwErrorMessage () {
-	echo "ERROR: You must enter a number." .PHP_EOL;
+function throwErrorMessage ($fx) {
+	return "ERROR: You must enter a number is order to $fx." .PHP_EOL;
 }
 
 // Add code to test your functions here
 echo add('cat','dog').PHP_EOL;
 echo subtract('cat',$b).PHP_EOL;
 echo multiply($a,'dog').PHP_EOL;
-echo divide($a,0).PHP_EOL;
+echo divide(15,'dog').PHP_EOL;
+echo modulus('dog').PHP_EOL;
