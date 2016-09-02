@@ -46,10 +46,12 @@ $companies = [
 ];
 
 // Sort the people in each company alphabetically. You will need to use a foreach loop and will need to reassign each inner array after sorting. Output the result.
-foreach ($companies as $company) {
-    natcasesort($company) .PHP_EOL;
-    print_r($company) .PHP_EOL;
+foreach ($companies as $company => $names) {
+    natcasesort($names);
+    $companies[$company] = $names;    
+    print_r($companies);
 }
+
 
 
 
