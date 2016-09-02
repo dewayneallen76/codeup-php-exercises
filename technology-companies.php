@@ -49,9 +49,7 @@ $companies = [
 foreach ($companies as $company => $names) {
     natcasesort($names);
     $companies[$company] = $names;    
-    print_r($companies);
-}
-
+} print_r($companies);
 
 
 
