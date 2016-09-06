@@ -1,8 +1,6 @@
 <?php
 
  // Converts array into list n1, n2, ..., and n3
-$physicistsString = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mallory, Bruce Banner, Tony Stark';
-
 function humanizedList($string, $sort = false) 
 {
 	$physicistsArray = explode(', ', $string);
@@ -21,7 +19,7 @@ $physicistsString = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mall
 $physicistsArray = [];
 
  // Humanize that list
-$famousFakePhysicists = humanizedList($physicistsString,"sort");
+$famousFakePhysicists = humanizedList($physicistsString);
 
  // Output sentence
 echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists}.".PHP_EOL;
