@@ -28,6 +28,11 @@ function salesReport($filename)
 		} 
 	array_multisort($soldUnit, SORT_DESC, $report);
 
+	echo "Total Number of Employees: " . count($report). PHP_EOL;
+	// echo "Total Number of Units Sold: " . count($soldUnit) . PHP_EOL;
+
+
+
 	fclose($handle);
 	return($report);
 }
