@@ -7,9 +7,11 @@ function parseContacts($filename)
    	$contacts = explode("\n", $contents);
    	array_pop($contacts);
    	foreach ($contacts as $contact) {
-   		explode("|", $contact);
-   	}
-   	
+   		$contactArray = explode("|", $contact);
+   		array_push($contacts, $contactArray);
+   		array_shift($contacts);
+	} 
+
    	fclose($handle);
    	
     // todo - read file and parse contacts
