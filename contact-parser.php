@@ -8,10 +8,12 @@ function parseContacts($filename)
    	array_pop($contacts);
    	foreach ($contacts as $contact) {
    		$contactArray = explode("|", $contact);
-   		array_push($contacts, $contactArray);
+   		$associativeArray = [];
+   		$associativeArray["name"] = $contactArray[0];
+   		$associativeArray["phone"] = $contactArray[1];
+   		array_push($contacts, $associativeArray);
    		array_shift($contacts);
 	} 
-
    	fclose($handle);
    	
     // todo - read file and parse contacts
