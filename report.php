@@ -18,10 +18,15 @@ function salesReport($filename)
 		$reportAssociativeArray["employee number"] = $reportArray[0];
 		$reportAssociativeArray["first name"] = $reportArray[1];
 		$reportAssociativeArray["last name"] = $reportArray[2];
-		$reportAssociativeArray["units sold"] = $reportArray[3];
+		$reportAssociativeArray["sales units"] = $reportArray[3];
 		array_push($report, $reportAssociativeArray);
 		array_shift($report);
 	}
+	// sort array by sales units highest to lowest 
+	foreach ($report as $key => $row) {
+		$soldUnit[$key] = $row['sales units'];
+		} 
+	array_multisort($soldUnit, SORT_DESC, $report);
 
 	fclose($handle);
 	return($report);
