@@ -5,7 +5,7 @@ function logMessage($logLevel, $message)
     date_default_timezone_set('America/Chicago');
     // variable for adding date to the log output
     $logDate = date("Y-m-d  h:i:s");
-    $filename = date("Y-m-d") . ".log";
+    $filename = "log-". date("Y-m-d") . ".log";
     $handle = fopen($filename, 'a');
     // message that will  be logged to the log file
     $addMessage = $logDate . " " . "[$logLevel]" ." " . $message;
