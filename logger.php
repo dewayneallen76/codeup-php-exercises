@@ -6,8 +6,7 @@ function logMessage($logLevel, $message)
     $logDate = date("Y-m-d  h:m:s");
     $filename = 'log-YYYY-MM-DD.log';
     $handle = fopen($filename, 'a');
-    $message = "";
-    $addMessage = $logDate . $message;
+    $addMessage = $logDate . " " . $message;
     fwrite($handle, $addMessage . PHP_EOL);
     fclose($handle);
   
@@ -15,4 +14,4 @@ function logMessage($logLevel, $message)
 }
 
 logMessage("INFO", "This is an info message.");
-logMessage("ERROR", "This is an info message.");
+logMessage("ERROR", "This is an error message.");
