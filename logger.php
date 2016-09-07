@@ -27,6 +27,6 @@ function logError($message)
 	logMessage('INFO', $message);
 }
 
-logError("Error occured");
-logInfo("User Logged In");
+logError("Username or Password is incorrect");
+logInfo("User Logged In Successfully");
 
