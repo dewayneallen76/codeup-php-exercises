@@ -3,6 +3,7 @@
 function salesReport($filename) 
 {
 	// opening file report.txt and making an array 
+	$salesUnits = 0; // variable to count salesUnits 
 	$filename = 'report.txt';
 	$handle = fopen($filename, 'r');
 	$contents = fread($handle, filesize($filename));
@@ -19,6 +20,7 @@ function salesReport($filename)
 		$reportAssociativeArray["first name"] = $reportArray[1];
 		$reportAssociativeArray["last name"] = $reportArray[2];
 		$reportAssociativeArray["sales units"] = $reportArray[3];
+		$salesUnits += $reportArray[3];
 		array_push($report, $reportAssociativeArray);
 		array_shift($report);
 	}
@@ -27,16 +29,19 @@ function salesReport($filename)
 		$soldUnit[$key] = $row['sales units'];
 		} 
 	array_multisort($soldUnit, SORT_DESC, $report);
-
-	echo "Total Number of Employees: " . count($report). PHP_EOL;
-	// echo "Total Number of Units Sold: " . count($soldUnit) . PHP_EOL;
-
-
-
+	// echo information for sales report
+	echo "Total Number of Employees: " . count($report) . PHP_EOL;
+	echo "Total Number of Units Sold: " . $salesUnits . PHP_EOL;
+	echo "Average Total Sales: " . $salesUnits/count($report) . PHP_EOL;
+	echo "----------------------------------------------------". PHP_EOL;
+	echo "SalesUnits    Name   Employee Number" .PHP_EOL;
+	// foreach loop to iterate through all employees and echo information 
+	foreach($report as $salesReportList => $key) {
+		echo $key['sales units']. "     ". $key['first name'] . $key['last name'] . "      " . $key['employee number'] . PHP_EOL;
+	}
 	fclose($handle);
-	return($report);
 }
 
-var_dump(salesReport('report.txt'));
+salesReport('report.txt');
 
 
