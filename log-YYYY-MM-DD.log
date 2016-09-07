@@ -26,3 +26,16 @@
 2016-09-07  10:09:58This is an error message. 
 2016-09-07  10:09:30 This is an info message.
 2016-09-07  10:09:30 This is an error message.
+2016-09-07  10:09:51 This is an info message.
+2016-09-07  10:09:51 This is an error message.
+2016-09-07  10:35:40 This is an info message.
+2016-09-07  10:35:40 This is an error message.
+2016-09-07  10:42:32  This is an info message.
+2016-09-07  10:43:58 INFO This is an info message.
+2016-09-07  10:47:55 INFO This is an info message.
+2016-09-07  10:49:51 INFO This is an info message.
+2016-09-07  10:51:13 INFO This is an info message.
+2016-09-07  10:54:42 INFO This is an info message.
+2016-09-07  10:58:23 [INFO] This is an info message.
+2016-09-07  10:59:07 [INFO] This is an info message.
+2016-09-07  10:59:07 [ERROR] This is an error message.
