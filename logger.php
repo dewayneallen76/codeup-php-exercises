@@ -2,7 +2,16 @@
 
 function logMessage($logLevel, $message)
 {
-    // todo - complete this function
+    date_default_timezone_set('America/Chicago');
+    $logDate = date("Y-m-d  h:m:s");
+    $filename = 'log-YYYY-MM-DD.log';
+    $handle = fopen($filename, 'a');
+    $message = "";
+    $addMessage = $logDate . $message;
+    fwrite($handle, $addMessage . PHP_EOL);
+    fclose($handle);
+  
+    return $addMessage;
 }
 
 logMessage("INFO", "This is an info message.");
