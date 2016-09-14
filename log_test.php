@@ -6,8 +6,6 @@ require_once 'log.php';
 // Create an instance of the Log class
 // Update log_test.php; pass the prefix 'cli' to the class and do not manually set the $filename property. Test from the command line.
 $NewInstance = new Log('cli');
-// Set the $filename property in the class; use the format log-YYYY-MM-DD.log.
-// $NewInstance->filename;
 // Call the methods logMessage(), info(), and error() with to test the functionality of each.
 $NewInstance->info("This is an info message.");
 $NewInstance->error("This is an error message.");
