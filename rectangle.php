@@ -7,9 +7,19 @@ class Rectangle
 
 	public function __construct($height,$width) 
 	{
+		$this->height = setHeight($height);
+		$this->width = setWidth($width);
+	}
+	// SETTERS
+	public function setHeight($height) 
+	{
 		$this->height = $height;
+	}
+	public function setWidth($width)
+	{
 		$this->width = $width;
 	}
+	// GETTERS
 	public function getHeight() 
 	{
 		return $this->height;
@@ -21,11 +31,11 @@ class Rectangle
 	
 	public function area() 
 	{
-		return $this->getHeight() * $this->getWidth();
+		return $this->height * $this->width;
 	}
 	public function perimeter() 
 	{
-		return ($this->getHeight() + $this->getHeight()) + ($this->getWidth() + $this->getWidth());
+		return ($this->height + $this->height) + ($this->width + $this->width);
 	}
 }
 
